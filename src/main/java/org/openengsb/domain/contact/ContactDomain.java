@@ -40,6 +40,11 @@ public interface ContactDomain extends Domain {
     void updateContact(Contact contact);
 
     /**
+     * loads a contact from the server
+     */
+    Contact loadContact(String id);
+
+    /**
      * deletes a contact on the server
      */
     void deleteContact(String id);
