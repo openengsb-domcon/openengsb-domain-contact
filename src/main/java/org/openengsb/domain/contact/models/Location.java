@@ -17,53 +17,30 @@
 
 package org.openengsb.domain.contact.models;
 
+import org.openengsb.core.api.ekb.EKBProxyable;
+
 /**
  * represents a location
  */
-public class Location {
-    private String country;
-    private String state;
-    private String city;
-    private String zip;
-    private String address;
+public interface Location extends EKBProxyable {
 
-    public String getCountry() {
-        return country;
-    }
+    String getCountry();
 
-    public void setCountry(String country) {
-        this.country = country;
-    }
+    void setCountry(String country);
 
-    public String getState() {
-        return state;
-    }
+    String getState();
 
-    public void setState(String state) {
-        this.state = state;
-    }
+    void setState(String state);
 
-    public String getCity() {
-        return city;
-    }
+    String getCity();
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+    void setCity(String city);
 
-    public String getZip() {
-        return zip;
-    }
+    String getZip();
 
-    public void setZip(String zip) {
-        this.zip = zip;
-    }
+    void setZip(String zip);
 
-    public String getAddress() {
-        return address;
-    }
+    String getAddress();
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+    void setAddress(String address);
 }
