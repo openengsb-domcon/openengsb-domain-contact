@@ -21,6 +21,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.openengsb.core.api.model.OpenEngSBModel;
+import org.openengsb.core.api.model.OpenEngSBModelId;
 
 /**
  * represents a contact with all their necessary infos
@@ -29,6 +30,7 @@ public interface Contact extends OpenEngSBModel {
     
     String getId();
 
+    @OpenEngSBModelId
     void setId(String id);
 
     String getName();
