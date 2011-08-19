@@ -17,7 +17,7 @@
 
 package org.openengsb.domain.contact.models;
 
-import org.openengsb.core.api.ekb.EKBProxyable;
+import org.openengsb.core.api.model.OpenEngSBModel;
 
 /**
  * represents an easy way to store informations with values.
@@ -26,7 +26,7 @@ import org.openengsb.core.api.ekb.EKBProxyable;
  *           key = address.work ; value = a location
  *           ...
  */
-public interface InformationTypeWithValue<T> extends EKBProxyable {
+public interface InformationTypeWithValue<T> extends OpenEngSBModel {
 
     void setKey(String key);
 

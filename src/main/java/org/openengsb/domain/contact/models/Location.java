@@ -17,12 +17,12 @@
 
 package org.openengsb.domain.contact.models;
 
-import org.openengsb.core.api.ekb.EKBProxyable;
+import org.openengsb.core.api.model.OpenEngSBModel;
 
 /**
  * represents a location
  */
-public interface Location extends EKBProxyable {
+public interface Location extends OpenEngSBModel {
 
     String getCountry();
 
