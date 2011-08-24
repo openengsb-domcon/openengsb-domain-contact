@@ -17,6 +17,8 @@
 
 package org.openengsb.domain.contact.models;
 
+import org.openengsb.core.api.model.OpenEngSBModel;
+
 /**
  * represents an easy way to store informations with values.
  * Examples: key = phone.private ; value = "..."
@@ -24,28 +26,13 @@ package org.openengsb.domain.contact.models;
  *           key = address.work ; value = a location
  *           ...
  */
-public class InformationTypeWithValue<T> {
-    private String key;
-    private T value;
+public interface InformationTypeWithValue<T> extends OpenEngSBModel {
 
-    public InformationTypeWithValue(String key, T value) {
-        this.setKey(key);
-        this.setValue(value);
-    }
+    void setKey(String key);
 
-    public void setKey(String key) {
-        this.key = key;
-    }
+    String getKey();
 
-    public String getKey() {
-        return key;
-    }
+    void setValue(T value);
 
-    public void setValue(T value) {
-        this.value = value;
-    }
-
-    public T getValue() {
-        return value;
-    }
+    T getValue();
 }
