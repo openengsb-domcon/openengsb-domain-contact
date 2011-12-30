@@ -26,7 +26,7 @@
   http://www.w3.org/2001/XMLSchema-instance http://www.w3.org/2001/XMLSchema-instance.xsd">
 
   <title>Contact Domain</title>
-  <para>The contact domain is the tool domain for contact management tools, like gcontacts or Facebook.</para>
+  <para>The contact domain is the tool domain for all contact books in tools which are using contact books like gcontacts or Facebook.</para>
   <section>
     <title>Description</title>
     <para>The contact domain provides the possibility to create, update, delete and retrieve contacts.</para>
