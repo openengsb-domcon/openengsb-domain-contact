@@ -19,6 +19,8 @@ package org.openengsb.domain.contact;
 
 import org.openengsb.core.api.DomainEvents;
 
+// @extract-start ContactDomainEvents
 public interface ContactDomainEvents extends DomainEvents {
 
 }
+// @extract-end

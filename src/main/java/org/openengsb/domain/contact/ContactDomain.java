@@ -24,6 +24,7 @@ import org.openengsb.core.api.Domain;
 import org.openengsb.domain.contact.models.Contact;
 import org.openengsb.domain.contact.models.Location;
 
+// @extract-start ContactDomain
 /**
  * This domain is used to maintain different contact books in different tools like gcontacts or facebook.
  */
@@ -55,3 +56,4 @@ public interface ContactDomain extends Domain {
     ArrayList<Contact> retrieveContacts(String id, String name, String homepage,
             Location location, Date date, String comment);
 }
+// @extract-end
