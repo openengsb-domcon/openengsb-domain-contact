@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.openengsb.domain.contact.models;
+package org.openengsb.domain.contact;
 
 import java.util.Date;
 import java.util.List;

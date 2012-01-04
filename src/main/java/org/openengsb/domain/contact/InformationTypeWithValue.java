@@ -15,32 +15,24 @@
  * limitations under the License.
  */
 
-package org.openengsb.domain.contact.models;
+package org.openengsb.domain.contact;
 
 import org.openengsb.core.api.model.OpenEngSBModel;
 
 /**
- * represents a location
+ * represents an easy way to store informations with values.
+ * Examples: key = phone.private ; value = "..."
+ *           key = birthday ; value = a date
+ *           key = address.work ; value = a location
+ *           ...
  */
-public interface Location extends OpenEngSBModel {
+public interface InformationTypeWithValue<T> extends OpenEngSBModel {
 
-    String getCountry();
+    void setKey(String key);
 
-    void setCountry(String country);
+    String getKey();
 
-    String getState();
+    void setValue(T value);
 
-    void setState(String state);
-
-    String getCity();
-
-    void setCity(String city);
-
-    String getZip();
-
-    void setZip(String zip);
-
-    String getAddress();
-
-    void setAddress(String address);
+    T getValue();
 }

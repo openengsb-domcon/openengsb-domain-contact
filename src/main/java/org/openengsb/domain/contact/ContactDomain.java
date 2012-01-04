@@ -21,8 +21,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import org.openengsb.core.api.Domain;
-import org.openengsb.domain.contact.models.Contact;
-import org.openengsb.domain.contact.models.Location;
 
 // @extract-start ContactDomain
 /**
