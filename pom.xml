@@ -31,7 +31,7 @@
   <properties>
     <bundle.symbolicName>org.openengsb.domain.contact</bundle.symbolicName>
     <bundle.namespace>org.openengsb.domain.contact</bundle.namespace>
-    <domain.name>Contact</domain.name>
+    <domain.name>ContactDomain</domain.name>
     <openengsb.framework.version>2.1.2</openengsb.framework.version>
   </properties>
 
