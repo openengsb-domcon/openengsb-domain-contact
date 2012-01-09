@@ -1,3 +1,25 @@
+openengsb-domain-contact-2.0.0 2012-01-09
+---------------------------------------------------------------------
+
+** Bug
+    * [OPENENGSB-2317] - adapt contact domain to current openengsb-framework
+    * [OPENENGSB-2582] - Domains and Connectors need to include our snapshot repo to work with deployed snapshots correctly
+
+** Improvement
+    * [OPENENGSB-1834] - Enhance contact domain with EDB CUD Events
+    * [OPENENGSB-2586] - Include issuetracker, buildserver and inceptionYear from root
+    * [OPENENGSB-2598] - Make package structure flat to make wsdl-generation possible
+
+** New Feature
+    * [OPENENGSB-2513] - move documentation to domain
+    * [OPENENGSB-2575] - Include wsdl definition from 2.4.0 parent
+
+** Task
+    * [OPENENGSB-2566] - upgrade openengsb-domain-parent to 2.3.0 in all domains
+    * [OPENENGSB-2596] - Adapt domain.name in domains to be e.g. AppointmentDomain instead of Appointment alone
+    * [OPENENGSB-2623] - release domain-contact-2.0.0
+
+
 openengsb-domain-contact-1.2.1 2011-05-23
 ---------------------------------------------------------------------
 
