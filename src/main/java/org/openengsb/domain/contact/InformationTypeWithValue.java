@@ -17,22 +17,41 @@
 
 package org.openengsb.domain.contact;
 
-import org.openengsb.core.api.model.OpenEngSBModel;
+import org.openengsb.core.api.Constants;
+import org.openengsb.core.api.model.annotation.Model;
+import org.openengsb.labs.delegation.service.Provide;
 
 /**
- * represents an easy way to store informations with values.
- * Examples: key = phone.private ; value = "..."
- *           key = birthday ; value = a date
- *           key = address.work ; value = a location
- *           ...
+ * Represents an easy way to store informations with values. Examples: key = phone.private ; value = "..." key =
+ * birthday ; value = a date key = address.work ; value = a location ...
  */
-public interface InformationTypeWithValue<T> extends OpenEngSBModel {
+@Provide(context = { Constants.DELEGATION_CONTEXT_MODELS })
+@Model
+public class InformationTypeWithValue<T> {
+    private String key;
+    private T value;
+    
+    public InformationTypeWithValue() {
+    }
+    
+    public InformationTypeWithValue(String key, T value) {
+        this.key = key;
+        this.value = value;
+    }
 
-    void setKey(String key);
+    public String getKey() {
+        return key;
+    }
 
-    String getKey();
+    public void setKey(String key) {
+        this.key = key;
+    }
 
-    void setValue(T value);
+    public T getValue() {
+        return value;
+    }
 
-    T getValue();
+    public void setValue(T value) {
+        this.value = value;
+    }
 }

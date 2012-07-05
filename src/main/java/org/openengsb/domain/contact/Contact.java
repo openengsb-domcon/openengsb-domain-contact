@@ -20,44 +20,73 @@ package org.openengsb.domain.contact;
 import java.util.Date;
 import java.util.List;
 
-import org.openengsb.core.api.model.OpenEngSBModel;
-import org.openengsb.core.api.model.OpenEngSBModelId;
+import org.openengsb.core.api.Constants;
+import org.openengsb.core.api.model.annotation.Model;
+import org.openengsb.core.api.model.annotation.OpenEngSBModelId;
+import org.openengsb.labs.delegation.service.Provide;
 
 /**
- * represents a contact with all their necessary infos
+ * Represents a contact with all their necessary informations
  */
-public interface Contact extends OpenEngSBModel {
-    
-    String getId();
-
+@Provide(context = { Constants.DELEGATION_CONTEXT_MODELS })
+@Model
+public class Contact {
     @OpenEngSBModelId
-    void setId(String id);
-
-    String getName();
-
-    void setName(String name);
-
-    List<InformationTypeWithValue<String>> getMails();
-
-    void setMails(List<InformationTypeWithValue<String>> mails);
-
-    List<InformationTypeWithValue<String>> getHomepages();
-
-    void setHomepages(List<InformationTypeWithValue<String>> homepages);
-
-    List<InformationTypeWithValue<String>> getTelephones();
-
-    void setTelephones(List<InformationTypeWithValue<String>> telephones);
-
-    List<InformationTypeWithValue<Location>> getLocations();
-
-    void setLocations(List<InformationTypeWithValue<Location>> locations);
-
-    List<InformationTypeWithValue<Date>> getDates();
-
-    void setDates(List<InformationTypeWithValue<Date>> dates);
-
-    String getComment();
-
-    void setComment(String comment);
+    private String id;
+    private String name;
+    private List<InformationTypeWithValue<String>> mails;
+    private List<InformationTypeWithValue<String>> homepages;
+    private List<InformationTypeWithValue<String>> telephones;
+    private List<InformationTypeWithValue<Location>> locations;
+    private List<InformationTypeWithValue<Date>> dates;
+    private String comment;
+    
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public List<InformationTypeWithValue<String>> getMails() {
+        return mails;
+    }
+    public void setMails(List<InformationTypeWithValue<String>> mails) {
+        this.mails = mails;
+    }
+    public List<InformationTypeWithValue<String>> getHomepages() {
+        return homepages;
+    }
+    public void setHomepages(List<InformationTypeWithValue<String>> homepages) {
+        this.homepages = homepages;
+    }
+    public List<InformationTypeWithValue<String>> getTelephones() {
+        return telephones;
+    }
+    public void setTelephones(List<InformationTypeWithValue<String>> telephones) {
+        this.telephones = telephones;
+    }
+    public List<InformationTypeWithValue<Location>> getLocations() {
+        return locations;
+    }
+    public void setLocations(List<InformationTypeWithValue<Location>> locations) {
+        this.locations = locations;
+    }
+    public List<InformationTypeWithValue<Date>> getDates() {
+        return dates;
+    }
+    public void setDates(List<InformationTypeWithValue<Date>> dates) {
+        this.dates = dates;
+    }
+    public String getComment() {
+        return comment;
+    }
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 }

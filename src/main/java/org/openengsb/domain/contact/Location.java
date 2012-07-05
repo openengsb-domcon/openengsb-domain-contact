@@ -17,30 +17,59 @@
 
 package org.openengsb.domain.contact;
 
-import org.openengsb.core.api.model.OpenEngSBModel;
+import org.openengsb.core.api.Constants;
+import org.openengsb.core.api.model.annotation.Model;
+import org.openengsb.labs.delegation.service.Provide;
 
 /**
- * represents a location
+ * Represents a location
  */
-public interface Location extends OpenEngSBModel {
+@Provide(context = { Constants.DELEGATION_CONTEXT_MODELS })
+@Model
+public class Location {
+    private String country;
+    private String state;
+    private String city;
+    private String zip;
+    private String address;
 
-    String getCountry();
+    public String getCountry() {
+        return country;
+    }
 
-    void setCountry(String country);
+    public void setCountry(String country) {
+        this.country = country;
+    }
 
-    String getState();
+    public String getState() {
+        return state;
+    }
 
-    void setState(String state);
+    public void setState(String state) {
+        this.state = state;
+    }
 
-    String getCity();
+    public String getCity() {
+        return city;
+    }
 
-    void setCity(String city);
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-    String getZip();
+    public String getZip() {
+        return zip;
+    }
 
-    void setZip(String zip);
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
 
-    String getAddress();
+    public String getAddress() {
+        return address;
+    }
 
-    void setAddress(String address);
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }
