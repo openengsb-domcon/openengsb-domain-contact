@@ -111,6 +111,20 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>wagon-maven-plugin</artifactId>
       </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Delegation-Annotations>true</Delegation-Annotations>
+            <Provide-Models>true</Provide-Models>
+            <Domain-Name>contact</Domain-Name>
+            <Domain-Interface>org.openengsb.domain.contact.ContactDomain</Domain-Interface>
+            <DomainEvents-Interface>org.openengsb.domain.contact.ContactDomainEvents</DomainEvents-Interface>
+          </instructions>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
